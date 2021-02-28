@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/mohamedsamny/vending-machine/issues"
   },
-  "homepage": "https://github.com/mohamedsamny/vending-machine#readme"
+  "homepage": "https://github.com/mohamedsamny/vending-machine#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
