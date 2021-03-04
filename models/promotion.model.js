@@ -5,7 +5,7 @@ module.exports = function (app) {
 
   const promotion = new Schema({
     id: ObjectId,
-    product_id: String,
+    product_id: ObjectId,
     start_date: Date,
     end_date: Date,
     percentage: Number

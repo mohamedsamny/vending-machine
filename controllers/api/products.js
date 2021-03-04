@@ -13,7 +13,7 @@ module.exports = function (app) {
 
     return products.map((product) => {
       const activePromotion = promotions.find((promotion) => {
-        return promotion.product_id == product._id
+        return promotion.product_id.toString() === product._id.toString()
       })
       if (activePromotion !== undefined) { product.price = product.price - (product.price * activePromotion.percentage) }
       return product
