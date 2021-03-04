@@ -7,7 +7,8 @@ module.exports = function (app) {
     id: ObjectId,
     product_id: String,
     start_date: Date,
-    end_date: Date
+    end_date: Date,
+    percentage: Number
   })
 
   return mongooseClient.model('promotion', promotion)
