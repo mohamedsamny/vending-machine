@@ -8,7 +8,8 @@ module.exports = function (app) {
     name: String,
     description: String,
     price: Number,
-    quantity: Number
+    quantity: Number,
+    max_quantity: Number
   })
 
   return mongooseClient.model('product', product)

@@ -36,7 +36,9 @@ module.exports = function (app) {
 
   app.post('/api/products/:id/refill', async function (req, res) {
     const product = await models.product.findById(req.params.id)
-    product.quantity += 1
+    if (product.quantity < product.max_quantity) {
+      product.quantity += 1
+    }
     await product.save()
 
     const products = await fetchProductsWithPromotions()
